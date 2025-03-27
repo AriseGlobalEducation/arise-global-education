@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Arise Global Education</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: url('background.jpg') no-repeat center center/cover;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 10%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .confirmation {
+            display: none;
+            text-align: center;
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .map {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .nav-links li {
+            display: inline;
+        }
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .navbar .nav-links a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Arise Global Education</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="candidaturee.html">Candidature</a></li>
+            
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <form id="contactForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="subject">Sujet :</label>
+            <input type="text" id="subject" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <div class="confirmation" id="confirmationMessage">
+            ✅ Votre message a bien été envoyé ! Nous vous répondrons sous peu.
+        </div>
+
+        <div class="map">
+            <h3>📍 Notre Adresse</h3>
+            <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.8923315363486!2d4.0533219!3d36.7011251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128dc906c9a45a71%3A0xad8e5a0d54ab24e4!2sArise%20Global%20Education%20Tizi%20ouzou!5e0!3m2!1sfr!2sdz!4v1742131681005!5m2!1sfr!2sdz" 
+    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("confirmationMessage").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("confirmationMessage").style.display = "none";
+                document.getElementById("contactForm").reset();
+            }, 3000);
+        });
+    </script>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fa-solid fa-location-dot"></i> La Tour - à coté la pharmacie 'La Tour', Tizi Ouzou</p>
+            <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:arise.ge.info@gmail.com">arise.ge.info@gmail.com</a></p>
+            <p><i class="fa-solid fa-phone"></i> Téléphone: <a href="tel:+213770202604 +213770235464">+213 770 20 26 04   +213 770 23 54 64</a></p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Suivez-nous</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="img/instagram.webp" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="img/linkedin.webp" alt="LinkedIn"></a>
+                <h3>Arise Global Education</h3>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Informations</h3>
+            <p><a href="#">Mentions Légales</a> | <a href="#">Politique de Confidentialité</a></p>
+            <p>© 2024 Arise Global Education - Tous droits réservés</p>
+        </div>
+    </div>
+</footer>
+
+<!-- CSS -->
+<style>
+    .footer {
+        background-color: #ffffff;
+        color: #333;
+        padding: 30px 0;
+        text-align: center;
+        border-top: 2px solid #ddd;
+        font-family: Arial, sans-serif;
+        
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-section {
+        margin: 10px;
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .footer-section p, .footer-section a {
+        font-size: 14px;
+        color: #555;
+        text-decoration: none;
+    }
+
+    .footer-section a:hover {
+        color: #000;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+
+    .social-icons img:hover {
+        transform: scale(1.1);
+    }
+</style>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Témoignages - Carousel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #2b3856;
+            margin-bottom: 20px;
+        }
+
+        .carousel-container {
+            width: 100%;
+            max-width: 800px; /* Ajuste la taille globale */
+            margin: auto;
+           
+        }
+
+        .swiper {
+            width: 100%;
+            height: auto;
+            padding-bottom: 30px;
+            overflow: visible !important;
+        }
+
+        .swiper-slide {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: auto; /* Taille carrée */
+            height: 250px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .testimonial-initial {
+            width: 50px;
+            height: 50px;
+            background: #1976D2;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-name {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.4;
+            text-align: center;
+            max-width: 200px;
+        }
+
+        
+        /* Pagination style personnalisé */
+.swiper-pagination {
+    bottom: 10px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;  /* Rectangle */
+    height: 8px;
+    background: #d3d3d3; /* Gris clair */
+    border-radius: 5px; /* Coins arrondis */
+    transition: all 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+    width: 30px; /* Plus large quand actif */
+    background: #17a2b8; /* Couleur bleue/verte */
+}
+.swiper-wrapper {
+    justify-content: start; /* Évite un décalage vers la droite */
+}
+
+    </style>
+</head>
+<body>
+
+    <h2>✨ Témoignages de nos étudiants ✨</h2>
+
+    <div class="carousel-container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-header">
+                        <div class="testimonial-initial">I</div>
+                        <div>
+                            <div class="testimonial-name">Imene Abc</div>
+                            <small>Google Review</small>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Une équipe toujours à l'écoute, un accompagnement de qualité, et de précieux conseils.</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="testimonial-header">
+                        <div class="testimonial-initial">N</div>
+                        <div>
+                            <div class="testimonial-name">Nadir Aidrous</div>
+                            <small>Google Review</small>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Merci pour votre sérieux et professionnalisme. Une équipe dynamique et toujours disponible.</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="testimonial-header">
+                        <div class="testimonial-initial">B</div>
+                        <div>
+                            <div class="testimonial-name">Bali Bali1</div>
+                            <small>Google Review</small>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Un service parfait, des conseils avisés et une équipe qui accompagne les étudiants jusqu'au bout.</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="testimonial-header">
+                        <div class="testimonial-initial">Y</div>
+                        <div>
+                            <div class="testimonial-name">Yasmine K.</div>
+                            <small>Google Review</small>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Expérience incroyable ! Je recommande vivement leurs services.</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="testimonial-header">
+                        <div class="testimonial-initial">K</div>
+                        <div>
+                            <div class="testimonial-name">Karim B.</div>
+                            <small>Google Review</small>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Très satisfait de l'accompagnement ! Une équipe au top !</p>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+       var swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 2.5, /* 3 cartes pleines + 1 partielle */
+    spaceBetween: 20, /* Espacement entre les cartes */
+    centeredSlides: false, 
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+
+    </script>
+
+</body>
+</html>
