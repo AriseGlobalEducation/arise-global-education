@@ -6,6 +6,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>ESCG Paris - École Supérieure de Commerce et de Gestion</title>
     <style>
+        /*mobil*/
+@media (max-width: 768px) {
+    .tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 10px;
+        padding: 0 10px;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .tabs::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
+    }
+
+    .tab {
+        flex: 0 0 auto;
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+}
+
+/* Affichage mobile */
+@media (max-width: 768px) {
+    .navbar .logo {
+        font-size: 13px;
+        white-space: nowrap; /* Empêche le retour à la ligne */
+        overflow: hidden; /* Cache tout débordement */
+        max-width: 100%; /* S’assure que ça ne déborde pas */
+        display: inline-block;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Réduit le padding pour les écrans plus petits */
+    }
+
+    .navbar .logo {
+        font-size: 20px; /* Réduit la taille de la police du logo */
+    }
+
+    .navbar .nav-links a {
+        font-size: 14px; /* Réduit la taille de la police des liens */
+    }
+
+    .navbar .nav-links {
+        gap: 10px; /* Réduit l'espacement entre les liens */
+    }
+}
+
+/*mobil*/
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
