@@ -88,23 +88,44 @@
         }
 
 /* Styles pour mobile */
+/*mobil*/
 @media (max-width: 768px) {
-    .navbar {
-        padding: 10px 20px; /* Réduit le padding pour les écrans plus petits */
+    .tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 10px;
+        padding: 0 10px;
+        scrollbar-width: none; /* Firefox */
     }
 
-    .navbar .logo {
-        font-size: 20px; /* Réduit la taille de la police du logo */
+    .tabs::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
     }
 
-    .navbar .nav-links a {
-        font-size: 14px; /* Réduit la taille de la police des liens */
-    }
-
-    .navbar .nav-links {
-        gap: 10px; /* Réduit l'espacement entre les liens */
+    .tab {
+        flex: 0 0 auto;
+        font-size: 14px;
+        padding: 12px 8px;
     }
 }
+
+/* Affichage mobile */
+@media (max-width: 768px) {
+    .navbar .logo {
+    font-size: 13px;
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: hidden; /* Cache tout débordement */
+    max-width: 100%; /* S’assure que ça ne déborde pas */
+    display: inline-block;
+    position: relative; /* Utiliser 'relative' ou 'absolute' selon le besoin */
+    left: 0; /* Pour positionner l'élément à gauche, si nécessaire */
+}
+
+}
+
+
+/*mobil*/
         /* Section Hero */
         .hero {
             background: url('img/france\ banner.jpg') no-repeat center center/cover;
