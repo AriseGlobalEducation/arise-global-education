@@ -87,6 +87,24 @@
             color: #007bff;
         }
 
+/* Styles pour mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Réduit le padding pour les écrans plus petits */
+    }
+
+    .navbar .logo {
+        font-size: 20px; /* Réduit la taille de la police du logo */
+    }
+
+    .navbar .nav-links a {
+        font-size: 14px; /* Réduit la taille de la police des liens */
+    }
+
+    .navbar .nav-links {
+        gap: 10px; /* Réduit l'espacement entre les liens */
+    }
+}
         /* Section Hero */
         .hero {
             background: url('img/france\ banner.jpg') no-repeat center center/cover;
@@ -1007,6 +1025,11 @@ document.querySelectorAll("#schoolList li").forEach(item => {
     showSteps(); // S'assurer que les étapes visibles au chargement apparaissent
 });
 
+
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show'); // Ajoute ou enlève la classe 'show'
+}
 </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
