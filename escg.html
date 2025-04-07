@@ -31,23 +31,20 @@
 /* Affichage mobile */
 @media (max-width: 768px) {
     .navbar .logo {
-        font-size: 13px;
-        white-space: nowrap; /* Empêche le retour à la ligne */
-        overflow: hidden; /* Cache tout débordement */
-        max-width: 100%; /* S’assure que ça ne déborde pas */
-        display: inline-block;
-    }
+    font-size: 13px;
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: hidden; /* Cache tout débordement */
+    max-width: 100%; /* S’assure que ça ne déborde pas */
+    display: inline-block;
+    position: relative; /* Utiliser 'relative' ou 'absolute' selon le besoin */
+    left: 0; /* Pour positionner l'élément à gauche, si nécessaire */
+}
 }
 
 @media (max-width: 768px) {
     .navbar {
         padding: 10px 20px; /* Réduit le padding pour les écrans plus petits */
     }
-
-    .navbar .logo {
-        font-size: 20px; /* Réduit la taille de la police du logo */
-    }
-
     .navbar .nav-links a {
         font-size: 14px; /* Réduit la taille de la police des liens */
     }
@@ -56,7 +53,11 @@
         gap: 10px; /* Réduit l'espacement entre les liens */
     }
 }
-
+@media (max-width: 480px) {
+            .formation-card {
+                padding: 20px 15px;    
+            }
+        }
 /*mobil*/
 
         body {
@@ -259,10 +260,21 @@
     border-radius: 8px; /* Facultatif : arrondi léger */
 }
 
+
+/*disponible*/
+.formation-card .badge {
+            background-color: #27ae60;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
-<header>
+
     <nav class="navbar">
         <a href="#" class="logo">Arise Global Education</a>
         <ul class="nav-links">
@@ -272,6 +284,7 @@
             <li><a href="france.html">Retour</a></li>
         </ul>
     </nav>
+    <header>
     <div class="hec-container">
         
         <a href="candidaturee.html" class="btn">Postuler maintenant</a>
@@ -325,6 +338,9 @@
                         <img src="img/master_management.webp" alt="Mastère Management Stratégique">
                         <h3>Mastère Management Stratégique</h3>
                         <p>Développez des compétences avancées en gestion et leadership.</p>
+                        <div class="formation-card">
+                            <div class="badge">Disponible</div>
+                        </div>
                     </div>
                 </section>
             </div>
